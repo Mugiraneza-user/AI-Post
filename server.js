@@ -229,7 +229,7 @@ cron.schedule('*/15 * * * *', () => {
 updateCache();
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`RSS Hub server running on port ${PORT}`);
   console.log(`RSS feed available at: http://localhost:${PORT}/rss`);
   console.log(`JSON feed available at: http://localhost:${PORT}/json`);
